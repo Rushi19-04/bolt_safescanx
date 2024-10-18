@@ -1,0 +1,80 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.app {
+  @apply min-h-screen bg-gray-100 flex flex-col;
+}
+
+.app-header {
+  @apply bg-blue-600 text-white p-4 flex items-center;
+
+  h1 {
+    @apply text-2xl font-bold ml-2;
+  }
+}
+
+.app-main {
+  @apply flex-grow p-6;
+}
+
+.scan-section {
+  @apply flex flex-col md:flex-row gap-6;
+}
+
+.scan-option {
+  @apply bg-white p-6 rounded-lg shadow-md flex-1;
+
+  h2 {
+    @apply text-xl font-semibold mb-4 flex items-center;
+    svg {
+      @apply mr-2;
+    }
+  }
+}
+
+.dropzone {
+  @apply border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer;
+  &:hover {
+    @apply border-blue-500;
+  }
+}
+
+.url-form {
+  @apply flex flex-col gap-2;
+
+  input {
+    @apply border border-gray-300 rounded px-3 py-2;
+  }
+
+  button {
+    @apply bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600;
+  }
+}
+
+.loading {
+  @apply text-center mt-4 text-lg font-semibold;
+}
+
+.error {
+  @apply text-center mt-4 text-lg font-semibold text-red-600;
+}
+
+.scan-results {
+  @apply mt-8 bg-white p-6 rounded-lg shadow-md;
+
+  h2 {
+    @apply text-xl font-semibold mb-4;
+  }
+
+  .chart-container {
+    @apply w-full max-w-md mx-auto;
+  }
+
+  .result-summary {
+    @apply mt-4 text-center;
+    p {
+      @apply text-lg;
+    }
+  }
+}
